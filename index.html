@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="video-container">
+        <div id="video1" class="video"></div>
+        <div id="video2" class="video"></div>
+        <div id="video3" class="video"></div>
+        <div id="video4" class="video"></div>
+    </div>
+    <div class="controls">
+        <button onclick="prevVideo()">Previous</button>
+        <button onclick="nextVideo()">Next</button>
+        <button onclick="showVideoList()">Video List</button>
+        <button onclick="shuffleVideo()">Shuffle</button>
+        <input type="range" id="videoRange" min="0" max="100" value="0" oninput="seekVideo()" />
+        <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+    </div>
+    <div id="video-list" class="video-list">
+        <button onclick="playVideo(0)">Video 1</button>
+        <button onclick="playVideo(1)">Video 2</button>
+        <button onclick="playVideo(2)">Video 3</button>
+        <button onclick="playVideo(3)">Video 5</button>
+    </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
